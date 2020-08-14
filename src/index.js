@@ -4,16 +4,30 @@ import ReactDOM from "react-dom";
 import './App.css';
 
 
-const styleForH1={
-  color:"yellow",
-  fontSize:"20px",
-  border:"1px solid green"
-};
+const date=new Date();
+const currentTime=date.getHours();
 
-styleForH1.color="cyan";
+let greeting;
+
+const customStyle={
+  color:"",
+}
+
+if(currentTime<12){
+  greeting="Good Morning";
+  customStyle.color="yellow";
+}
+else if(currentTime<18){
+  greeting="Good Afternoon";
+  customStyle.color="cyan";
+}
+else{
+  greeting="Good Night";
+  customStyle.color="green";
+}
 
 ReactDOM.render(
-  <h1 style={styleForH1}>Hello World</h1>,
+<h1 className="heading" style={customStyle}>{greeting}</h1>,
   document.getElementById("root")
 );
 

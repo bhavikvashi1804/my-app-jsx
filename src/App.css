@@ -29,13 +29,11 @@
 }
 
 .heading{
-  color:red;
+  font-size: 50px;
+  font-weight: bold;
+  border-bottom: 5px solid cyan;
 }
 
-.images{
-  width: 100px;
-  height: 100px;
-}
 
 @keyframes App-logo-spin {
   from {
