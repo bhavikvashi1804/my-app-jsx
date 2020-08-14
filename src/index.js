@@ -1,15 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const fName="Bhavik";
-const lName="Vashi";
+import './App.css';
 
 ReactDOM.render(
   <div>
-    <p>Created by {fName+" "+lName}</p>
-    <p>Copyright @{(new Date().getFullYear())}</p>
+    <h1 className="heading">My Fav Foods</h1>
+    <ul>
+      <li>Pizza</li>
+      <li>Dabeli</li>
+      <li>Vada paw</li>
+    </ul>
   </div>,
   document.getElementById("root")
 );
-
-//if else does not allow in JSX {}
